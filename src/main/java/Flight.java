@@ -97,4 +97,17 @@ public class Flight {
     public int howManyBagsTillHalfFull() {
         return this.plane.howMuchToHalfFull() / 15;
     }
+
+    public int howManyBagsPerPassenger(){
+        return howManyBagsTillHalfFull() / this.plane.getCurrentPlaneCapacity();
+    }
+
+    public int weightOfPlane(){
+        return this.plane.howMuchDoesThePlaneWeight();
+    }
+
+    public int weightRemains(){
+        int currentWeight = this.plane.howMuchDoesThePlaneWeight();
+        return this.plane.getTotalWeightCapacity() - currentWeight;
+    }
 }

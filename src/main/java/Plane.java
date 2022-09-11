@@ -102,4 +102,12 @@ public class Plane {
         int halfCapacity = this.totalWeightCapacity / 2;
         return halfCapacity - planeWeight;
     }
+
+    public int howMuchDoesThePlaneWeight(){
+        int weightOfBaggage = 0;
+        for(Passenger passenger : this.passengerList){
+            weightOfBaggage += passenger.getBaggageWieght();
+        }
+        return this.planeWeight + weightOfBaggage;
+    }
 }

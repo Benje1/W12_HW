@@ -109,4 +109,20 @@ public class FlightTest {
     public void howMuchIsHalfFull() {
         assertEquals(933, this.flight.howManyBagsTillHalfFull());
     }
+
+    @Test
+    public void howManyBagsPerPerson() {
+        assertEquals(13, this.flight.howManyBagsPerPassenger());
+    }
+
+    @Test
+    public void howMuchWeightOfBagqage() {
+        this.flight.bookPassenger(passenger);
+        assertEquals(6015, this.flight.weightOfPlane());
+    }
+
+    @Test
+    public void howMuchWeightRemains(){
+        assertEquals(34000, this.flight.weightRemains());
+    }
 }
